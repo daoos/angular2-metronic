@@ -8,20 +8,18 @@ import {PageEmptyComponent} from  './components/page/page-empty/page-empty.compo
 import {ColorLibraryComponent} from  './components/ui-features/color-library/color-library.component';
 
 @Component({
-  selector: 'angular2-metronic-app',
-  templateUrl: 'app/app.template.html',
-  directives: [MainLayoutSidebarComponent, MainLayoutHeaderComponent, MainLayoutQuickSidebarComponent,  MainLayoutFooterComponent , ROUTER_DIRECTIVES ]
+    selector: 'angular2-metronic-app',
+    templateUrl: 'app/app.template.html',
+    directives: [MainLayoutSidebarComponent, MainLayoutHeaderComponent, MainLayoutQuickSidebarComponent, MainLayoutFooterComponent, ROUTER_DIRECTIVES]
 
 })
 
 @RouteConfig([
-        { path: '/', name: 'Home', component: PageEmptyComponent },
-        { path: '/color-library', name: 'ColorLibrary', component: ColorLibraryComponent },
+    {path: '/', name: 'Home', component: PageEmptyComponent},
+    {path: '/color-library', name: 'ColorLibrary', component: ColorLibraryComponent},
 ])
 
-export class AppComponent
-    implements AfterViewInit
-{
+export class AppComponent implements AfterViewInit {
     ngAfterViewInit() {
         App.init();
         App.initAjax();
